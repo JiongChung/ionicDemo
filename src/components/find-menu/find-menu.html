@@ -1,0 +1,13 @@
+<!-- Generated template for the FindMenuComponent component -->
+<div>
+    <ion-grid>
+        <ion-row>
+            <ion-col *ngFor="let item of menulist" (click)="showToast('bottom')">
+                <span class="img">
+                    <img [src]="item.img" alt="">
+                </span>
+                <span class="title">{{item.name}}</span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>

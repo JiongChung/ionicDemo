@@ -1,0 +1,9 @@
+home-banner {
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+        bottom: 2rem;
+    }
+
+    .swiper-slide{
+        font-size: 0;
+    }
+}

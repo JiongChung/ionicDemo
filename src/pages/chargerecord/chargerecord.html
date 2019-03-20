@@ -1,0 +1,74 @@
+<!--
+  Generated template for the ChargerecordPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>充值记录</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="Pull to refresh"
+            refreshingSpinner="circles"
+            refreshingText="正在刷新...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="chargerecord-item">
+        <ion-grid class="total">
+            <ion-row>
+                <ion-col >
+                    <span>总充值金额</span>
+                    <h4>{{myAsset.totalAmount}}元</h4>
+                </ion-col>
+                <ion-col >
+                    <span>可用金额</span>
+                    <h4>{{myAsset.availableAmount}}元</h4>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-grid class="recordlist-title">
+            <ion-row>
+                <ion-col >
+                    <span>时间</span>
+                </ion-col>
+                <ion-col >
+                    <span>类型</span>
+                </ion-col>
+                <ion-col >
+                    <span>金额</span>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-grid class="myasset">
+            <ion-row *ngFor="let item of myAssetLogs">
+                <ion-col >
+                    <span>{{item.usedTime}}</span>
+                </ion-col>
+                <ion-col >
+                    <span>{{item.typeName}}</span>
+                </ion-col>
+                <ion-col >
+                    <span>{{item.amount}}</span>
+                </ion-col>
+            </ion-row>
+            <div *ngIf="totalCount == 0">
+                <div>没有数据</div>
+            </div>
+        </ion-grid>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="正在加载...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

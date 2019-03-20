@@ -1,0 +1,60 @@
+page-oilcard {
+    .card-info{
+        background: #f7f7f7;
+
+        span{
+            display: block;
+            color: #ee0000;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        span + span{
+            padding-top: 1rem;
+        }
+    }
+
+    .apply-item{
+        padding: 0 2rem;
+
+        .col{
+            padding: 0;
+
+            .button{
+                border-radius: 2rem 0 0 2rem;
+            }
+        }
+        .col:last-child{
+            .button{
+                border-radius: 0 2rem 2rem 0;
+            }
+        }
+    }
+    
+
+    .cardlist{
+        .swiper-pagination{
+            visibility: hidden;
+        }
+
+        .icon{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 0;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 0 0.7rem;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .number{
+            position: absolute;
+            bottom: 1rem;
+            left: 2rem;
+            font-size: 1.4rem;
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<!-- Generated template for the HomeProfileComponent component -->
+<div class="bg">
+    <div class="title">一站式服务，全方位保障</div>
+    <ion-list >
+        <ion-item *ngFor="let item of toolslist">
+            <span class="img"><img [src]="item.img" alt=""></span>
+            <p>{{item.name}}</p>
+        </ion-item>
+    </ion-list>
+</div>

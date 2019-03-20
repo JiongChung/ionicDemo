@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>我的油粉</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+   
+   <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="Pull to refresh"
+            refreshingSpinner="circles"
+            refreshingText="正在刷新...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="fans-item">
+        <h2>我的推荐人</h2>
+        <ion-list>
+            <ion-item class="referee clearfix">
+                <span class="name">{{myReferrer.account}}</span>
+                <span class="label">{{myReferrer.grade}}</span>
+            </ion-item>
+        </ion-list>
+        <h2 class="fans-title">我的油粉</h2>
+        <ion-grid>
+            <ion-row>
+                <ion-col >
+                    时间
+                </ion-col>
+                <ion-col >
+                    帐号
+                </ion-col>
+                <ion-col >
+                    级别
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-list>
+            <ion-item class="referee fans clearfix" *ngFor="let item of myFans">
+               <span class="name">{{item.joinDateTime}}</span>
+               <span class="account">{{item.account}}</span>
+               <span class="label">{{item.grade}}</span>
+            </ion-item>
+        </ion-list>
+   </div>
+   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="正在加载...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

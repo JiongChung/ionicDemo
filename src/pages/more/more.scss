@@ -1,0 +1,38 @@
+page-more {
+    .arrow_d{
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        bottom: 0;
+        margin: auto;
+        height: 1.2rem;
+        width: 0.6rem;
+
+        i{
+            border-left-color: #999999;
+
+            i{
+                border-left-color: #ffffff;
+            }
+        }
+    }
+
+    .list-icon{
+        position: relative;
+        background: url(../../assets/imgs/gerensezhi_icon.png) no-repeat;
+        background-size: 100%;
+        top: 5px;
+    }
+    .contant{
+        background: url(../../assets/imgs/lianxiwomen_icon.png) no-repeat;
+        background-size: 100%;
+    }
+    .aboutus{
+        background: url(../../assets/imgs/guanyuwomen.png) no-repeat;
+        background-size: 100%;
+    }
+    .faq{
+        background: url(../../assets/imgs/FAQ_icon.png) no-repeat;
+        background-size: 100%;
+    }
+}   

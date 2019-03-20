@@ -1,0 +1,63 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>个人设置</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list >
+        <ion-item>
+            头像
+            <p class="text"><img class="img" [src]="avatar" alt=""></p>
+            <span class="arrow_d"><i><i></i></i></span>
+        </ion-item>
+        <ion-item (click)="openModal('修改昵称','请输入昵称','text','nickName')">
+            昵称
+            <p class="text">{{mySetting.nickName}}</p>
+            <span class="arrow_d"><i><i></i></i></span>
+        </ion-item>
+        <ion-item (click)="openModal('修改手机','请输入验证码','number','phoneNumber')">
+            手机号
+            <p class="text">{{mySetting.phoneNumber}}</p>
+            <span class="arrow_d"><i><i></i></i></span>
+        </ion-item>
+        <ion-item (click)="openModal('修改密码','请输入验证码','number','pwd')">
+            修改密码
+            <span class="arrow_d"><i><i></i></i></span>
+        </ion-item>
+        <ion-item (click)="openModal('修改邮箱','请输入邮箱','text','emailAddress')">
+            我的邮箱
+            <p class="text">{{mySetting.emailAddress}}</p>
+            <span class="arrow_d"><i><i></i></i></span>
+        </ion-item>
+        <ion-item>
+           真实姓名
+           <p class="text">{{mySetting.realName}}</p>
+           <span class="arrow_d"><i><i></i></i></span>
+        </ion-item>
+        <ion-item (click)="openOilCard()">
+            绑定我的油卡
+            <span class="arrow_d"><i><i></i></i></span>
+        </ion-item>
+        <ion-item (click)="openQrcode()">
+            我的二维码
+            <span class="arrow_d"><i><i></i></i></span>
+        </ion-item>
+    </ion-list>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <button ion-button color="danger" (click)="logout()" block>退出登录</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,44 @@
+<!--
+  Generated template for the UserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>智慧油联</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <user-profile [data]="data"></user-profile>
+    <user-assets [data]="data"></user-assets>
+    <ion-grid class="user-menu">
+        <ion-row class="clearfix">
+            <ion-col *ngFor="let item of usertoolsmenuone" (click)="openMenu(item.id)">
+                <span class="img">
+                    <img [src]="item.img" alt="">
+                </span>
+                <span class="title">{{item.name}}</span>
+            </ion-col>
+        </ion-row>
+        <ion-row class="clearfix">
+            <ion-col *ngFor="let item of usertoolsmenutwo" (click)="openMenu(item.id)">
+                <span class="img">
+                    <img [src]="item.img" alt="">
+                </span>
+                <span class="title">{{item.name}}</span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <img src="assets/imgs/share.png" alt="">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

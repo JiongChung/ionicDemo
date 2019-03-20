@@ -1,0 +1,41 @@
+user-assets {
+    .user-asstes-border{
+        border-bottom: solid 0.5rem #e4e4e4;
+    }
+    .col{
+        text-align: center;
+    }
+    h4{
+        font-size: 1.6rem;
+    }
+    b{
+        font-weight: normal;
+        position: relative;
+        padding-left: 2rem;
+    }
+    b:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url(../../assets/imgs/youdou_icon.png) no-repeat;
+        background-size: 100%;
+        display: block;
+        content: "";
+        bottom: 0;
+        margin: auto;
+    }
+    .oilpower:before{
+        background: url(../../assets/imgs/youlizhi_icon.png) no-repeat;
+        background-size: 100%;
+    }
+    .commission:before{
+        background: url(../../assets/imgs/yongjinzhanghu_icon.png) no-repeat;
+        background-size: 100%;
+    }
+    span{
+        color: #ee0000;
+        font-size: 1.2rem;
+    }
+}

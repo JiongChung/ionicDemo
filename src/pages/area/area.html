@@ -1,0 +1,94 @@
+<!--
+  Generated template for the AreaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>我的区域</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="Pull to refresh"
+            refreshingSpinner="circles"
+            refreshingText="正在刷新...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <ion-grid class="area">
+        <ion-row>
+            <ion-col >
+                <ion-card>
+                    <ion-card-header>
+                        <span class="todaycharge">今日充值</span>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b>{{todayRecharge}}</b>元
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col >
+                <ion-card>
+                    <ion-card-header>
+                        <span class="monthcharge">当月充值</span>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b>{{monthlyTotalRecharge}}</b>元
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col >
+                <ion-card>
+                    <ion-card-header>
+                        <span class="todayaward">今日奖励</span>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b>{{todayCommission}}</b>元
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col >
+                <ion-card>
+                    <ion-card-header>
+                        <span class="monthaward">当月奖励</span>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <b>{{monthlyTotalCommission}}</b>元
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="partner">
+        <h1>合伙人信息</h1>
+        <ion-list >
+            <ion-item *ngFor="let item of agentList">
+                <ion-avatar item-start *ngIf="item.agentLogo == null;else elseBlock">
+                   <img src="assets/imgs/buddha_icon.png">
+                </ion-avatar>
+                <ng-template #elseBlock>
+                    <ion-avatar item-start>
+                        <img [src]="item.agentLogo">
+                    </ion-avatar>
+                </ng-template>
+                <h2>{{item.agentAcount}}</h2>
+                <p>{{item.agentTime}}</p>
+            </ion-item>
+        </ion-list>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="正在加载...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

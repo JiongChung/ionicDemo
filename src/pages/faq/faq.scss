@@ -1,0 +1,19 @@
+page-faq {
+    .arrow_d{
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        bottom: 0;
+        margin: auto;
+        height: 1.2rem;
+        width: 0.6rem;
+
+        i{
+            border-left-color: #999999;
+
+            i{
+                border-left-color: #ffffff;
+            }
+        }
+    }
+}

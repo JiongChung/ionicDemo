@@ -1,0 +1,10 @@
+<!-- Generated template for the HomeRechargeComponent component -->
+<div>
+    <ion-list >
+        <ion-item *ngFor="let item of rechargeList;" (click)="recharge(item.id)" >
+            <img [src]="item.img" alt="">
+            <h2>{{item.title}}</h2>
+            <p>{{item.info}}</p>
+        </ion-item>
+    </ion-list>
+</div>

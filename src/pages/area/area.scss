@@ -1,0 +1,74 @@
+page-area {
+    .area{
+        padding-bottom: 1rem;
+
+        .card{
+            margin: 0.5rem 1rem;
+        }
+        .card-header{
+            padding: 1rem 0;
+            font-size: 1.2rem;
+            color: #cccccc;
+            text-align: center;
+
+            span{
+                display: inline-block;
+                position: relative;
+                padding-left: 2.5rem;
+            }
+            span:before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                height: 1.5rem;
+                width: 2rem;
+                display: block;
+                content: "";
+                background: url(../../assets/imgs/Pay_icon.png) no-repeat;
+                background-size: 100%;
+            }
+            .monthcharge:before{
+                background: url(../../assets/imgs/total_icon.png) no-repeat;
+                background-size: 100%;
+            }
+            .todayaward:before{
+                background: url(../../assets/imgs/award_icon.png) no-repeat;
+                background-size: 100%;
+            }
+            .monthaward:before{
+                background: url(../../assets/imgs/reward_total_icon.png) no-repeat;
+                background-size: 100%;
+            }
+        }
+
+        .card-content{
+            text-align: center;
+
+            b{
+                font-size: 2rem;
+                color: #ee0000;
+            }
+        }
+    }
+    .partner{
+        border-top: solid 0.5rem #e5e5e5;
+
+        h2{
+            font-size: 1.4rem;
+        }
+
+        .item:last-child,
+        .item:first-child{
+            border:none;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 0;
+            padding: 1.5rem 0 1rem;
+        }
+    }
+}

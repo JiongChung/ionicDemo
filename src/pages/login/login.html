@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <div class="login-top-bar">
+        <span class="logo">
+            <img src="assets/imgs/logo_white.png" alt="">
+        </span>
+    </div>
+    <div class="login-item">
+        <ion-grid class="login-tabs">
+            <ion-row>
+                <ion-col class="active">
+                    <span>密码登录</span>
+                </ion-col>
+                <ion-col >
+                    <span>验证码登录</span>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value)"  autocomplete="off">
+                        <ul class="login-ul">
+                            <li><ion-input type="number" [formControl]="phone" clearInput=true placeholder="请输入手机号码"></ion-input></li>
+                            <li><ion-input type="password" [formControl]="password" clearInput=true placeholder="请输入密码"></ion-input></li>
+                            <li><button ion-button block type="submit" [disabled]="!myForm.valid" class="btn">登录</button></li>
+                        </ul>
+                    </form>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

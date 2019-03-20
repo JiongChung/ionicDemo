@@ -1,0 +1,36 @@
+home-recharge {
+    .list{
+        display: flex;
+        padding-top: 0.8rem;
+        margin-bottom: 1.5rem;
+
+        .item{
+            border: none !important;
+            padding-left: 0.2rem;
+
+            h2{
+                font-size: 1.8rem;
+                color: #ee0000;
+                text-align: center;
+            }
+
+            p{
+                text-align: center;
+                font-size: 1.2rem;
+                color: #222222
+            }
+
+            .item-inner{
+                border: none !important;
+                padding-right: 0;
+            }
+            .item-inner:last-child{
+                padding-right: 0.2rem;
+            }
+
+            .label{
+                margin: 0;
+            }
+        }
+    }
+}

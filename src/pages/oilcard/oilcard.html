@@ -1,0 +1,51 @@
+<!--
+  Generated template for the OilcardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>我的油卡</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col width-10>
+                <ion-slides #slides class="cardlist" pager [hidden]="!oilcardStatus">
+                    <ion-slide (ionSlideDidChange)="slideChanged()" *ngFor="let item of oilcardlist">
+                        <ion-icon (click)="removeCard(item.oilCardNo)" name="close"></ion-icon>
+                        <img [src]="item.url" alt="">
+                        <span class="number">{{item.oilCardNo}}</span>
+                    </ion-slide>
+                </ion-slides>
+                <ion-slides class="cardlist" pager *ngIf="!oilcardStatus">
+                    <ion-slide>
+                        <img (click)="openModal()" src="assets/imgs/tianjiayouka_card.png" alt="">
+                    </ion-slide>
+                </ion-slides>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-card class="card-info">
+        <ion-card-content>
+            <span>广东省内客户，使用“中石油”油卡，请选择“申请油卡”；中石化请绑定自己的“个人主卡”；</span>
+            <span>广东省外客户，请选择“添加油卡”，绑定自己的“个人主卡”。</span>
+        </ion-card-content>
+    </ion-card>
+    <ion-grid class="apply-item">
+        <ion-row>
+            <ion-col >
+                <button ion-button block color="danger" (click)="openModal()">添加油卡</button>
+            </ion-col>
+            <ion-col >
+                <button ion-button block color="secondary">申请油卡</button>                
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

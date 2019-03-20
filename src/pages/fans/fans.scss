@@ -1,0 +1,66 @@
+page-fans {
+    .fans-item{
+        padding-top: 1rem; 
+
+        h2{
+            font-size: 1.6rem;
+            padding-left: 2rem;
+        }
+
+        .col{
+            text-align: center;
+            color: #cccccc;
+            font-size: 1.2rem;
+        }
+    }
+    .fans-title{
+        margin-bottom: 0;
+    }
+    .referee{
+        border: none !important;
+        margin: 0;
+        padding: 0;
+        min-height: 1rem;
+        background: #f4f4f4;
+        box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+        overflow: visible;
+        border-radius:1rem;
+        border-left: solid 0.3rem #ee0000 !important;
+        font-size: 1.4rem;
+        padding-left: 1rem;
+
+        .item-inner{
+            border: none !important;
+            padding: 0 !important;
+        }
+        span{
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        .name{
+            float:left;
+        }
+        .label{
+            float: right;
+        }
+        .account{
+            float: left;
+        }
+    }
+
+    .fans{
+        margin-bottom: 1rem;
+
+        .name{
+            width: 22%;
+        }
+        .label{
+            width: 22%;
+        }
+        .account{
+            width: 56%;
+        }
+    }
+
+    
+}

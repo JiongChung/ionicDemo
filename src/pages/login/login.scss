@@ -1,0 +1,78 @@
+page-login {
+    .login-top-bar{
+        background: #ee0000;
+        padding: 0 0 3.5rem;
+
+        .logo{
+            width: 5rem;
+            height: 4rem;
+            display: block;
+            margin: auto;
+            position: relative;
+
+            img{
+                max-width: 100%;
+                display: block;
+            }
+        }
+    }
+    .login-item{
+        position: relative;
+        margin-top: -1rem;
+        background: #ffffff;
+        box-shadow: 0 0 1rem rgba(0,0,0,0.1);
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        border-radius: 2rem;
+
+        .login-tabs{
+            text-align: center;
+            padding: 0;
+            border-bottom: solid 1px #eee;
+
+            .col{
+                padding-top: 2rem;
+                padding-bottom: 10px;
+                position: relative;
+            }
+            .active{
+                span{
+                    display: inline-block;
+                    position: relative;
+                }
+                span:before{
+                    position: absolute;
+                    bottom: -12px;
+                    left: 0;
+                    right: 0;
+                    background: #ee0000;
+                    height: 3px;
+                    display: block;
+                    content: "";
+                }
+            }
+        }
+
+        .text-input{
+            border:solid 1px #ee0000;
+            padding: 1rem 1rem;
+            border-radius: 0.3rem;
+            margin: 0;
+            width: 100%;
+        }
+
+        .login-ul{
+            padding: 0.5rem 1rem 0;
+            li{
+                position: relative;
+                padding: 0.7rem 0;
+
+                .btn{
+                    background: #ee0000;
+                    border-radius: 2rem;
+                    padding: 0.5rem 0;
+                }
+            }
+        }
+    }
+}

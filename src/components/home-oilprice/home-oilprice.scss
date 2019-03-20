@@ -1,0 +1,61 @@
+home-oilprice {
+    .oilprice-iem{
+        position: relative;
+        margin-top: -1.8rem;
+        z-index: 2;
+        height: 3.6rem;
+    }
+    .card{
+        margin: 0 1rem;
+        border-radius: 10rem;
+    }
+    
+    .card-content{
+        padding: 0 1rem 0 1.5rem;
+        background:-moz-linear-gradient(top,#fff,#f4f4f4);
+        background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#fff), to(#f4f4f4));
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f4f4f4));
+        background: -webkit-linear-gradient(top, #fff, #f4f4f4);
+    }
+    .list{
+        display: flex;
+        .item-block{
+            min-height: 3rem;
+        }
+        .item{
+            padding: 0 0 0 0.5rem;
+            font-size: 1.2rem;
+            background:-moz-linear-gradient(top,#fff,#f4f4f4);
+            background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#fff), to(#f4f4f4));
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f4f4f4));
+            background: -webkit-linear-gradient(top, #fff, #f4f4f4);
+
+            .label{
+                margin:0.5rem 0.8rem 0.5rem 0;
+            }
+
+            h2{
+                font-size: 1.4rem;
+                margin: 0;
+            }
+
+            p{
+                font-size: 1.2rem;
+                margin: 0;
+            }
+        }
+        .item:first-child{
+            padding-left: 0;
+        }
+    }
+
+    .item.item-block .item-inner{
+        padding: 0;
+    }
+
+    .list > .item-block:first-child,
+    .list > .item-block:last-child{
+        border: none;
+    }
+}
+

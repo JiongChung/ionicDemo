@@ -1,0 +1,30 @@
+page-faqdetail {
+    h4{
+        font-size: 1.6rem;
+        position: relative;
+        padding: 0 0 0 1rem;
+        margin: 0.5rem 0;
+    }
+
+    h4:before{
+        position: absolute;
+        top: 0.5rem;
+        left: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: #ee0000;
+        border-radius: 50%;
+        display: block;
+        content: ""
+    }
+
+    p{
+        margin-left: 1rem;
+        margin: 0;
+        padding: 0.5rem 0;
+        line-height: 1.5;
+    }
+    .intent{
+        text-indent: 2em;
+    }
+}

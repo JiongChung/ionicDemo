@@ -1,0 +1,34 @@
+page-bankcard {
+    .bankcard-item{
+        .card-header{
+            text-align: center;
+
+            .card-icon{
+                width: 8.55rem;
+                height: 6rem;
+                display: block;
+                background: url(../../assets/imgs/tianjiayinhangka.png) no-repeat;
+                background-size: 100%;
+                margin: 1rem auto;
+            }
+        }
+
+        .bankcard{
+            background: transparent;
+            background: linear-gradient(to right,#FB6262,#CD3737);
+
+            .card-header{
+                color: #ffffff;
+                font-size: 1.6rem;
+            }
+
+            .card-content{
+                font-size: 2.4rem;
+                color: #ffffff;
+                text-align: center;
+            }
+        }
+    }
+
+    
+}
